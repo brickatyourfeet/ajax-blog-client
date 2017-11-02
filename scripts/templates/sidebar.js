@@ -1,5 +1,9 @@
 function sidebarItem (post) {
-  return `<li class="list-group-item">${post.title}</li>`
+  return `
+    <a href="#/posts/${post.id}" class="list-group-item list-group-item-action">
+      ${post.title}
+    </a>
+  `
 }
 
 function sidebarTemplate (posts) {
