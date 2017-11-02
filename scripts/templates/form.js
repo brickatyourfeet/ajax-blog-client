@@ -8,9 +8,7 @@ function formTemplate (method, post={ id: '', title: '', content: '' }) {
       </div>
       <div class="form-group">
         <label for="title">Content</label>
-        <textarea type="text" rows="6" class="form-control" id="content">
-          ${post.content}
-        </textarea>
+        <textarea type="text" rows="6" class="form-control" id="content">${post.content}</textarea>
       </div>
       <button type="submit" class="btn btn-info btn-large">${btnTxt}</button>
     </form>
