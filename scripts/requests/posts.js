@@ -4,5 +4,8 @@ window.Post = {
   },
   create (body) {
     return axios.post(`${baseURL}`, body)
+  },
+  destroy (id) {
+    return axios.delete(`${baseURL}/${id}`)
   }
 }
