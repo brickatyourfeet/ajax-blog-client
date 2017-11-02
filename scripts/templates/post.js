@@ -1,5 +1,5 @@
 function postTemplate (post) {
-  const converter = new showdown.Converter()
+  const converter = new showdown.Converter({ openLinksInNewWindow: true })
   const content = converter.makeHtml(post.content)
   return `
     <section>
