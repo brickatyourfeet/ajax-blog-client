@@ -1,6 +1,6 @@
-window.home = {
+window.homeView = {
   init () {
-    requestPosts.get()
+    Post.index()
       .then(({ data: { posts } }) => {
         let id = determinePost()
         if (!id) {
@@ -9,8 +9,8 @@ window.home = {
         }
 
         const selected = posts.find(post => post.id == id)
-        sidebar.init(posts, id)
-        post.init(selected)
+        sidebarView.init(posts, id)
+        postView.init(selected)
       })
   }
 }

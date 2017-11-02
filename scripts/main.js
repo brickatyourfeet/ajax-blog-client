@@ -1,2 +1,3 @@
 const baseURL = 'http://localhost:3000/posts'
-home.init()
+// home.init()
+newPostView.init()

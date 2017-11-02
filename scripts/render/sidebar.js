@@ -4,7 +4,7 @@ function goHome (event) {
   const hash = event.target.getAttribute('href')
   window.location.hash = hash
 
-  home.init()
+  homeView.init()
 }
 
 function addLinkEventHandler (link) {
@@ -16,7 +16,7 @@ function initLinks () {
   navLinks.forEach(addLinkEventHandler)
 }
 
-window.sidebar = {
+window.sidebarView = {
   init (posts, id) {
     document.querySelector('#sidebar').innerHTML = sidebarTemplate(posts)
     document.querySelector(`[href="#/posts/${id}"]`).classList.add('active')
