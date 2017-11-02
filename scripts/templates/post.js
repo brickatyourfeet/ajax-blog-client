@@ -21,3 +21,6 @@ function postTemplate (post) {
     </section>
   `
 }
+
+
+//this is the template rendered by the new post. go back to render - new

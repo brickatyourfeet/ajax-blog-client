@@ -12,14 +12,17 @@ function addLinkEventHandler (link) {
 }
 
 function initLinks () {
+    //makes an array from a node collection or whatever and repops list and add event handlers to all
   const navLinks = Array.from(document.querySelectorAll('a.list-group-item'))
   navLinks.forEach(addLinkEventHandler)
 }
+
 
 window.sidebarView = {
   init (posts, id) {
     document.querySelector('#sidebar').innerHTML = sidebarTemplate(posts)
     document.querySelector(`[href="#/posts/${id}"]`).classList.add('active')
+      //initLinks is up. up there. 
     initLinks()
   }
 }
