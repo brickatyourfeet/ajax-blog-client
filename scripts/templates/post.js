@@ -1,9 +1,13 @@
 function postTemplate (post) {
+  const converter = new showdown.Converter()
+  const content = converter.makeHtml(post.content)
   return `
     <section>
-      <h2>${post.title}</h2>
-      <hr>
-      <p>${post.content}</p>
+      <header>
+        <h2>${post.title}</h2>
+        <hr>
+      </header>
+      <article>${content}</article>
       <aside class="my-4">
         <ul class="nav justify-content-end">
           <li class="nav-item">
